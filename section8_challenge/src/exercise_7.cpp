@@ -16,7 +16,8 @@ int main() {
     double usd {0.0};
     cin >> usd;
 
-    double ksh = usd * ksh_per_usd;
+    double ksh {0.0};
+    ksh = usd * ksh_per_usd;
     cout << usd << " USD is equivalent to " << ksh << " KSH." << endl;
 
     return 0;
