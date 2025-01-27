@@ -23,9 +23,7 @@ int main() {
     cout << "Enter accidents (0/1): ";
     cin >> accidents;
 
-    bool eligible {(age >= 18 || (age > 15 && parental_consent == true)) && ssn == true && accidents != true};
-
-    if (eligible) {
+    if ((age >= 18 || (age > 15 && parental_consent == true)) && ssn == true && accidents != true) {
         cout << "\nYes, you can work.";
     } else {
         cout << "\nNo, you can't work.";
