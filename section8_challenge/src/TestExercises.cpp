@@ -1,4 +1,6 @@
-// https://google.github.io/googletest/reference/assertions.html
+// Google Test Docs: https://google.github.io/googletest/reference/assertions.html
+// Install Package: https://learn.microsoft.com/en-us/vcpkg/get_started/get-started?pivots=shell-powershell
+
 #include <gtest/gtest.h>
 #include "exercise_9/exercise_9.h"
 
