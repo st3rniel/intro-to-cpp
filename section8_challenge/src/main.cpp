@@ -7,12 +7,13 @@ vector<int> change(int denomination, int cents) {
   vector<int> result;
 
   result.push_back(cents/denomination); // add count
-  result.push_back(cents%denomination); // add reminder
+  result.push_back(cents%denomination); // add reminder TODO also = cents - (denomination * (cents / denomination))
 
   return result;
 }
 
 int main() {
+	cout << "Change Calculator" << endl;
 
 	// cents per dollar denomination
     int one_dollar {100};
@@ -23,10 +24,9 @@ int main() {
 	vector<int> denominations {one_dollar, one_quarter, one_dime, one_nickel, one_penny};
 	vector<string> denomination_names {"Dollars", "Quarters", "Dimes", "Nickels", "Pennies"};
 
-	cout << "Change Calculator" << endl;
 	cout << "Enter an amount in cents: ";
 
-	int cents {0};
+	int cents {0}; // TODO rename to change_amount
 	int cents_count {0};
 	int cents_reminder {0};
 
