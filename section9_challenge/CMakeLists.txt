@@ -12,6 +12,8 @@ add_executable(section9_challenge #src/main.cpp
         src/exercise_12/exercise_12.h
         src/exercise_13/exercise_13.h
         src/exercise_13/exercise_13.cpp
+        src/exercise_14/exercise_14.cpp
+        src/exercise_14/exercise_14.h
         src/TestExercises.cpp
 )
 

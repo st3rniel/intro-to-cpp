@@ -5,6 +5,7 @@
 #include <gtest/gtest.h>
 #include "exercise_12/exercise_12.h"
 #include "exercise_13/exercise_13.h"
+#include "exercise_14/exercise_14.h"
 
 TEST(CanDriveTests, HandlePositiveOutcomes) {
     ASSERT_EQ(can_drive(16, true), "Yes - you can drive!");
@@ -26,6 +27,11 @@ TEST(DayOfTheWeek, HandleAllOutcomes) {
     ASSERT_EQ(day_of_the_week(5), "Friday");
     ASSERT_EQ(day_of_the_week(6), "Saturday");
     ASSERT_EQ(day_of_the_week(7), "Error - illegal day code");
+}
+
+TEST(CalculateOddSumBetween, HandleExpectee) {
+    ASSERT_EQ(calculate_odd_sum_between(1, 15), 64);
+    ASSERT_EQ(calculate_odd_sum_between(0, 5), 9);
 }
 
 int main(int argc, char **argv) {
