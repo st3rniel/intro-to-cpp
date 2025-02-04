@@ -2,10 +2,12 @@
 // Created by Martin Oywa on 02/02/2025.
 //
 
+#include <vector>
 #include <gtest/gtest.h>
 #include "exercise_12/exercise_12.h"
 #include "exercise_13/exercise_13.h"
 #include "exercise_14/exercise_14.h"
+#include "exercise_15/exercise_15.h"
 
 TEST(CanDriveTests, HandlePositiveOutcomes) {
     ASSERT_EQ(can_drive(16, true), "Yes - you can drive!");
@@ -29,9 +31,15 @@ TEST(DayOfTheWeek, HandleAllOutcomes) {
     ASSERT_EQ(day_of_the_week(7), "Error - illegal day code");
 }
 
-TEST(CalculateOddSumBetween, HandleExpectee) {
+TEST(CalculateOddSumBetween, HandleExpected) {
     ASSERT_EQ(calculate_odd_sum_between(1, 15), 64);
     ASSERT_EQ(calculate_odd_sum_between(0, 5), 9);
+}
+
+TEST(CalculateDivisibityBy3and5, HandleExpected) {
+    ASSERT_EQ(count_divisible_by_3_and_5(std::vector<int>{1, 2, 3, 4, 5}), 2);
+    ASSERT_EQ(count_divisible_by_3_and_5(std::vector<int> {2, 4, 7, 8, 13}), 0);
+    ASSERT_EQ(count_divisible_by_3_and_5(std::vector<int> {1,3,5,15,16,17,18,19,20,21,25,26,27,30,50,55,56,58,100,200,300,400,500,600,700}), 18);
 }
 
 int main(int argc, char **argv) {

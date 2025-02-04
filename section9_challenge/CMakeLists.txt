@@ -15,6 +15,8 @@ add_executable(section9_challenge #src/main.cpp
         src/exercise_14/exercise_14.cpp
         src/exercise_14/exercise_14.h
         src/TestExercises.cpp
+        src/exercise_15/exercise_15.cpp
+        src/exercise_15/exercise_15.h
 )
 
 target_link_libraries(section9_challenge PRIVATE GTest::gtest_main)
