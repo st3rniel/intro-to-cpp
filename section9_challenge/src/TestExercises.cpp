@@ -8,6 +8,9 @@
 #include "exercise_13/exercise_13.h"
 #include "exercise_14/exercise_14.h"
 #include "exercise_15/exercise_15.h"
+#include "exercise_16/exercise_16.h"
+
+using namespace std;
 
 TEST(CanDriveTests, HandlePositiveOutcomes) {
     ASSERT_EQ(can_drive(16, true), "Yes - you can drive!");
@@ -40,6 +43,11 @@ TEST(CalculateDivisibityBy3and5, HandleExpected) {
     ASSERT_EQ(count_divisible_by_3_and_5(std::vector<int>{1, 2, 3, 4, 5}), 2);
     ASSERT_EQ(count_divisible_by_3_and_5(std::vector<int> {2, 4, 7, 8, 13}), 0);
     ASSERT_EQ(count_divisible_by_3_and_5(std::vector<int> {1,3,5,15,16,17,18,19,20,21,25,26,27,30,50,55,56,58,100,200,300,400,500,600,700}), 18);
+}
+
+TEST(CountBeforeNeg99, HandleExepected) {
+    ASSERT_EQ(count_numbers_before_neg_99(vector<int> {1, 2, 3, 4, 5, -99}), 5);
+    ASSERT_EQ(count_numbers_before_neg_99(vector<int> {0, 4, 6, 7, 10}), 5);
 }
 
 int main(int argc, char **argv) {
