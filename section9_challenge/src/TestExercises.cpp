@@ -9,6 +9,7 @@
 #include "exercise_14/exercise_14.h"
 #include "exercise_15/exercise_15.h"
 #include "exercise_16/exercise_16.h"
+#include "exercise_17/exercise_17.h"
 
 using namespace std;
 
@@ -49,6 +50,19 @@ TEST(CountBeforeNeg99, HandleExepected) {
     ASSERT_EQ(count_numbers_before_neg_99(vector<int> {1, 2, 3, 4, 5, -99}), 5);
     ASSERT_EQ(count_numbers_before_neg_99(vector<int> {0, 4, 6, 7, 10}), 5);
 }
+
+TEST(FindFirstVowel, HandlePositiveOutcomes) {
+    ASSERT_EQ(find_first_vowel(vector<char> {'f','r','a','n','k'}), "Vowel found: a");
+    ASSERT_EQ(find_first_vowel(vector<char> {'h','e','l','l','o'}), "Vowel found: e");
+    ASSERT_EQ(find_first_vowel(vector<char> {'x','y','z','o'}), "Vowel found: o");
+}
+
+TEST(FindFirstVowel, HandleNegativeOutcomes) {
+    ASSERT_EQ(find_first_vowel(vector<char> {'F','R','A','N','K'}), "No vowel was found");
+    ASSERT_EQ(find_first_vowel(vector<char> {}), "No vowel was found");
+    ASSERT_EQ(find_first_vowel(vector<char> {'h', 'l', 'l'}), "No vowel was found");
+}
+
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
