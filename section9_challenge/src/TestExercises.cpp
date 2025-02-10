@@ -10,6 +10,7 @@
 #include "exercise_15/exercise_15.h"
 #include "exercise_16/exercise_16.h"
 #include "exercise_17/exercise_17.h"
+#include "exercise_18/exercise_18.h"
 
 using namespace std;
 
@@ -61,6 +62,16 @@ TEST(FindFirstVowel, HandleNegativeOutcomes) {
     ASSERT_EQ(find_first_vowel(vector<char> {'F','R','A','N','K'}), "No vowel was found");
     ASSERT_EQ(find_first_vowel(vector<char> {}), "No vowel was found");
     ASSERT_EQ(find_first_vowel(vector<char> {'h', 'l', 'l'}), "No vowel was found");
+}
+
+TEST(CalculateVectorPairs, HandlePositiveOutcomes) {
+    ASSERT_EQ(calculate_vector_pairs(vector<int> {1, 2, 3}), 11);
+    ASSERT_EQ(calculate_vector_pairs(vector<int> {2, 4, 6, 8}), 140);
+}
+
+TEST(CalculateVectorPairs, HandleOutlierOutcomes) {
+    ASSERT_EQ(calculate_vector_pairs(vector<int> {10}), 0);
+    ASSERT_EQ(calculate_vector_pairs(vector<int> {}), 0);
 }
 
 

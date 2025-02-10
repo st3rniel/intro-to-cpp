@@ -10,7 +10,7 @@ int main() {
     cin >> age;
 
     if (age >= 16) {
-        cout << "Yes - you can drive!";
+       cout << "Yes - you can drive!";
     }
 
     return 0;

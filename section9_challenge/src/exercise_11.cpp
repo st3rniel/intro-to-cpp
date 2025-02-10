@@ -10,10 +10,10 @@ int main() {
     cin >> age;
 
     if (age >= 16) {
-        cout << "Yes - you can drive!";
+       cout << "Yes - you can drive!";
     } else {
         int diff {16 - age};
-        cout << "Sorry, come back in " << diff << " years";
+       cout << "Sorry, come back in " << diff << " years";
     }
 
     return 0;
