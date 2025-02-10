@@ -17,7 +17,7 @@ bool will_cause_duplicates(vector<int> vec, int input) {
 
     return false; */
 
-    return *ranges::find(vec, input);
+    return ranges::find(vec, input) != vec.end();
 }
 
 double calculate_mean(vector<int> vec) {
@@ -49,8 +49,7 @@ int get_largest_number(vector<int> vec) {
 
 int main() {
     char choice {};
-    vector<int> vec {1, 2, 3, 4, 5, 6, 7, 8};
-    // vector<int> vec {};
+    vector<int> vec {};
 
     do {
         // cout << '--------------------------' << endl;
@@ -68,7 +67,6 @@ int main() {
         if (choice == 'P' || choice == 'p') {
             if (handle_empty_vector(vec)) {
                 cout << "[] - the list is empty" << endl;
-                choice = 'Q';
             } else {
                 cout << "[ ";
                 for (auto i : vec) {
@@ -89,7 +87,6 @@ int main() {
         } else if (choice == 'M' || choice == 'm') {
             if (handle_empty_vector(vec)) {
                 cout << "Unable to calculate the mean - no data" << endl;
-                choice = 'Q';
             } else {
                 cout << "Mean is " << calculate_mean(vec) << endl;
             }
