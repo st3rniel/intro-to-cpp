@@ -3,10 +3,12 @@
 //
 
 #include <gtest/gtest.h>
+#include <string>
 #include <vector>
 
 #include "exercise_19/exercise_19.h"
 #include "exercise_20/exercise_20.h"
+#include "exercise_21/exercise_21.h"
 
 using namespace std;
 
@@ -26,6 +28,11 @@ TEST (exercise_20, FindNamesIndices) {
 TEST (exercise_20, FormattedFullNames) {
     ASSERT_EQ(get_formatted_full_name("MartinOywa"), "Martin Oywa");
     ASSERT_EQ(get_formatted_full_name("StephenHawking"), "Stephen Hawking");
+}
+
+TEST(exercise_21, DigitalLibrary) {
+    ASSERT_EQ(generate_digital_library(vector<string> ({"Isaac Newton", "Leibniz"})), vector<string> ({"Leibniz", "Newton"}));
+    ASSERT_EQ(generate_digital_library(vector<string> ({"Isaac Bolton", "Leibniz", "Martin Oywa"})), vector<string> ({"Bolton", "Leibniz", "Oywa"}));
 }
 
 int main(int argc, char **argv) {
