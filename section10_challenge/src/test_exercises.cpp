@@ -6,12 +6,12 @@
 #include <string>
 #include <vector>
 
+#include "main.h"
 #include "exercise_19/exercise_19.h"
 #include "exercise_20/exercise_20.h"
 #include "exercise_21/exercise_21.h"
 
 using namespace std;
-
 
 TEST(exercise_19, CStyleFunctions) {
     char first_name[10] {"Bjarne"};
@@ -34,6 +34,21 @@ TEST(exercise_21, DigitalLibrary) {
     ASSERT_EQ(generate_digital_library(vector<string> ({"Isaac Newton", "Leibniz"})), vector<string> ({"Leibniz", "Newton"}));
     ASSERT_EQ(generate_digital_library(vector<string> ({"Isaac Bolton", "Leibniz", "Martin Oywa"})), vector<string> ({"Bolton", "Leibniz", "Oywa"}));
 }
+
+TEST(SubstitutionCipher, CaesarCipher) {
+    // TODO get keys
+    map<char, int> key {encryption_key()};
+    // map<int, char> dk {decryption_key()};
+
+    // TODO test string
+    string s {"I am studying Data Encryption"};
+    string se {"M eq wxyhCmrk Hexe IrgvCtxmsr"};
+    int rotation {4};
+
+    ASSERT_EQ(encrypt(s, rotation, key), se);
+    ASSERT_EQ(decrypt(se, rotation, key), s);
+}
+
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);

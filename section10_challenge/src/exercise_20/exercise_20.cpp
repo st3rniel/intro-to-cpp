@@ -20,7 +20,6 @@ vector<size_t> findNamesIndices(const string& unformatted_full_name) {
 
 string get_formatted_full_name(const string& unformatted_full_name) {
     vector<size_t> indices = findNamesIndices(unformatted_full_name);
-
     // TODO solution 1
     // string first_name {unformatted_full_name, indices.at(0), indices.at(1)};
     // string last_name = unformatted_full_name.substr(indices.at(1));
