@@ -4,6 +4,7 @@
 #include "scope_ii/scope_ii.h"
 #include "basic_statistics/statistics.h"
 #include "primes/first_n_primes.h"
+#include "infinite_ternary/infinite_ternary.h"
 
 using namespace std;
 
@@ -11,15 +12,16 @@ int main() {
     // scope(); // call faulty function
     // scope_ii(); // call function. WTF, how lol?!
 
+    infinite_ternary();
 
-    int N {5};
+    // int N {5};
     // cout << "Enter number of primes: ";
     // cin >> N;
 
-    vector<int> primes = first_n_primes(N);
-    for (auto prime : primes) {
-        cout << prime << " ";
-    }
+    // vector<int> primes = first_n_primes(N);
+    // for (auto prime : primes) {
+    //     cout << prime << " ";
+    // }
 
     /*
     vector<int> list {2, 1, 3};
