@@ -5,6 +5,7 @@
 #include "basic_statistics/statistics.h"
 #include "primes/first_n_primes.h"
 #include "infinite_ternary/infinite_ternary.h"
+#include "factorial/factorial.h"
 
 using namespace std;
 
@@ -12,7 +13,9 @@ int main() {
     // scope(); // call faulty function
     // scope_ii(); // call function. WTF, how lol?!
 
-    infinite_ternary();
+    // infinite_ternary();
+
+    factorial();
 
     // int N {5};
     // cout << "Enter number of primes: ";

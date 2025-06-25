@@ -1,0 +1,15 @@
+{
+  "name" : "mit6-096iap11-assn01",
+  "version-string" : "1.0.0",
+  "builtin-baseline" : "f75c836a67777a86a2c1116a28b179827f028b66",
+  "dependencies" : [ {
+    "name" : "vcpkg-cmake-config",
+    "version>=" : "2024-05-23"
+  }, {
+    "name" : "vcpkg-cmake",
+    "version>=" : "2024-04-23"
+  }, {
+    "name" : "boost-multiprecision",
+    "version>=" : "1.86.0"
+  } ]
+}

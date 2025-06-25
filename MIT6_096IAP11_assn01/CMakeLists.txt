@@ -3,6 +3,8 @@ project(MIT6_096IAP11_assn01)
 
 set(CMAKE_CXX_STANDARD 20)
 
+find_package(Boost REQUIRED COMPONENTS multiprecision)
+
 add_executable(MIT6_096IAP11_assn01 src/main.cpp
 #        src/scope/scope.cpp
 #        src/scope/scope.h
@@ -13,4 +15,8 @@ add_executable(MIT6_096IAP11_assn01 src/main.cpp
         src/primes/first_n_primes.cpp
         src/primes/first_n_primes.h
         src/infinite_ternary/infinite_ternary.cpp
-        src/infinite_ternary/infinite_ternary.h)
+        src/infinite_ternary/infinite_ternary.h
+        src/factorial/factorial.cpp
+        src/factorial/factorial.h)
+
+target_link_libraries(MIT6_096IAP11_assn01 PRIVATE Boost::multiprecision)
