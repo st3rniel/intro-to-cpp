@@ -11,5 +11,8 @@
   }, {
     "name" : "boost-multiprecision",
     "version>=" : "1.86.0"
+  }, {
+    "name" : "gtest",
+    "version>=" : "1.17.0#1"
   } ]
 }

@@ -6,6 +6,7 @@
 #include "primes/first_n_primes.h"
 #include "infinite_ternary/infinite_ternary.h"
 #include "factorial/factorial.h"
+#include "fibonacci/fibonacci.h"
 
 using namespace std;
 
@@ -15,7 +16,9 @@ int main() {
 
     // infinite_ternary();
 
-    factorial();
+    // factorial();
+
+    fibonacci(2);
 
     // int N {5};
     // cout << "Enter number of primes: ";

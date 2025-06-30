@@ -7,22 +7,26 @@
 using namespace std;
 
 // First N numbers in the fibonacci sequence
+// TODO should I be checking the lengths instead of returning actual vectors.
 vector<int> fibonacci(int N) {
     vector<int> result {0, 1};
 
     if (N < 2) {
-        result.pop_back();
-        return result;
-    } else if (N == 2) {
+        for (int i = 0; i < 2 - N; i++) {
+            result.pop_back();
+        }
         return result;
     }
 
-    // add N-result.size() elements
-    int size = result.size();
-    for (int i = 0; i < N - size; i++) {
-        int last_idx = size - 1;
+    if (N == 2) {
+        return result;
+    }
+
+    // add N-2 elements i.e N > 2
+    for (int i = 0; i < N - 2; i++) {
+        int last_idx = result.size() - 1;
         int first = result.at(last_idx-1), second = result.at(last_idx);
-        cout << first << " " << second << " " << first+second << endl;
+        // cout << first << " " << second << " " << first+second << endl;
         result.push_back(first+second);
     }
 

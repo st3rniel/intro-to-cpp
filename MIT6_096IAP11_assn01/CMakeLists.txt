@@ -4,8 +4,10 @@ project(MIT6_096IAP11_assn01)
 set(CMAKE_CXX_STANDARD 20)
 
 find_package(Boost REQUIRED COMPONENTS multiprecision)
+find_package(GTest CONFIG REQUIRED)
 
-add_executable(MIT6_096IAP11_assn01 src/main.cpp
+add_executable(MIT6_096IAP11_assn01 #src/main.cpp
+        src/TestFunctions.cpp
 #        src/scope/scope.cpp
 #        src/scope/scope.h
 #        src/scope_ii/scope__ii.cpp
@@ -17,6 +19,9 @@ add_executable(MIT6_096IAP11_assn01 src/main.cpp
         src/infinite_ternary/infinite_ternary.cpp
         src/infinite_ternary/infinite_ternary.h
         src/factorial/factorial.cpp
-        src/factorial/factorial.h)
+        src/factorial/factorial.h
+        src/fibonacci/fibonacci.cpp
+        src/fibonacci/fibonacci.h
+)
 
-target_link_libraries(MIT6_096IAP11_assn01 PRIVATE Boost::multiprecision)
+target_link_libraries(MIT6_096IAP11_assn01 PRIVATE Boost::multiprecision GTest::gtest_main)
