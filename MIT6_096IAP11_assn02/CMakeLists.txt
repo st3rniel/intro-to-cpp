@@ -7,6 +7,11 @@ enable_testing()
 
 find_package(GTest CONFIG REQUIRED)
 
-add_executable(MIT6_096IAP11_assn02 src/TestFunctions.cpp)
+add_executable(MIT6_096IAP11_assn02 src/TestFunctions.cpp
+        src/a_simple_function/a_simple_function.cpp
+        src/a_simple_function/a_simple_function.h
+        src/sums/sums.cpp
+        src/sums/sums.h
+)
 
 target_link_libraries(MIT6_096IAP11_assn02 PRIVATE GTest::gtest_main)
